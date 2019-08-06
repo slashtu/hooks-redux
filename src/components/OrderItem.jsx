@@ -22,7 +22,7 @@ class OrderItem extends PureComponent {
         <OrderInfo>
           <Name>{`Name: ${name}`}</Name>
           <Price>{`Price: ${price}`}</Price>
-          <Notes>{notes}</Notes>
+          <Notes value={notes} readOnly />
         </OrderInfo>
         <Operations>
           <Button size="small" onClick={this.handleUpdate}>
@@ -64,7 +64,7 @@ const Name = styled.div``;
 
 const Price = styled.div``;
 
-const Notes = styled.div`
+const Notes = styled.textarea`
   height: 70px;
   border: 1px solid black;
 

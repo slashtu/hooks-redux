@@ -8,7 +8,7 @@ class TextareaField extends PureComponent {
 
     return (
       <StyledTextareaField>
-        <Label>{label}</Label>
+        {label && <Label>{label}</Label>}
         <Textarea {...restProps} />
         {error && <Error>{error}</Error>}
       </StyledTextareaField>
